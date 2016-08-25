@@ -1,0 +1,38 @@
+README  - Documentation starting point
+- documentation/    - Documentation folder
+    - README            - Information about this package
+    - FILES             - This file
+    - SAMPLE-CHANGELOG  - Change log for the sample
+- soap-proxy/       - SOAP proxy sample. Proxies HTTP requests to SOAP requsts. NOT USED YET
+	- client/
+		- soap-proxy.js     - JavaScript library to work with SOAP proxy
+	- server/
+		- soap_proxy.php    - Server side SOAP proxy PHP script
+- www/  - Web application for VidyoWeb Sample
+    - index.html    - Main HTML markup file. Application view.
+    - css/          - Stylesheets for VidyoWeb sample application
+        - main.css                         - Application specific stylesheet
+        - jquery-ui*.css                   - jQuery css; sample points to remote server (CDN) version
+    - files/
+        - EULA.html                        - End User License Agreement
+    - images/       - Images and glyphs
+        - logo-big.jpg              - Vidyo logo for splash screen
+        - *.png                     - UI button icons
+    - installers/   - Package Installers
+        - VidyoWeb-win32-1.0.x.yyyy.msi    - Windows installer for the VidyoWeb plugin
+        - VidyoWeb-macosx-1.0.x.yyyy.pkg   - OSX installer for the VidyoWeb plugin
+        - VidyoClientForWeb-win32-1.0.x.yyyy.msi    - Windows installer for the VidyoWeb plugin
+        - VidyoClientForWeb-macosx-1.0.x.yyyy.pkg   - OSX installer for the VidyoWeb plugin
+    - lib/          - 3rd party libraries
+        - jquery.*.js                   - jQuery library (http://jquery.com/)
+    - scripts/      - JavaScript files
+        - main.js           - Main application
+        - utils/    - Helpers and utilities
+            - soap-proxy.js     - SOAP proxy helper: NOT USED YET
+        - vidyo/    - VidyoWeb plugin wrapper libraries
+            - proxywrapper.js                     - VidyoClientForWeb interface
+            - vidyo.client.js                     - VidyoWeb client library; unused in sample to avoid using require/Angular/etc
+            - vidyo.client2.js                    - VidyoWeb client library; syntax adjusted for use with straight JavaScript
+            - vidyo.client.messages.js            - Generate default messages sent/received from plugin; unused in sample
+            - vidyo.client.parameters.js          - Dummy messages' parameters placeholder; unused in sample
+            - vidyo.client.private.messages.js    - New/beta messages; unusued in sample

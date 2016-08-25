@@ -1,0 +1,54 @@
+WHAT IS IT
+This package contains a sample application for VidyoWeb platform provided by Vidyo Inc. All rights reserved.
+Please see FILES file for the full file list and links to their origin.
+
+LICENSE
+(c) 2006-2016 Vidyo, Inc.,
+433 Hackensack Avenue, 6th Floor,
+Hackensack, NJ  07601.
+All rights reserved.
+The information contained herein is proprietary to Vidyo, Inc.
+and shall not be reproduced, copied (in whole or in part), adapted,
+modified, disseminated, transmitted, transcribed, stored in a retrieval
+system, or translated into any language in any form by any means
+without the express written consent of Vidyo, Inc.
+
+WHO IS IT FOR
+This package is intended for Web developers to show how to implement and use applications based on the VidyoWeb platform.
+
+MODULES
+VidyoWeb application consists of 3 parts:
+    - VidyoWeb plugin
+    - VidyoWeb sample application
+    - Optional third party Libraries
+
+VIDYOWEB PLUGIN
+This is a plugin binary code that has to be installed at the user's machine in order for VidyoWeb to work on NPAPI supporting browsers (IE, Firefox, and Safari).
+It performs server connectivity, media capture and rendering, application sharing, etc.
+msi/pkg installation package files are provided in the www/installers folder. 
+
+VIDYOCLIENTFORWEB PLUGIN
+This is a plugin binary code that has to be installed at the user's machine in order for VidyoWeb to work on Chrome.
+It performs server connectivity, media capture and rendering, application sharing, etc.
+msi/pkg installation package files are provided in the www/installers folder. 
+
+JAVASCRIPT APPLICATION
+VidyoWeb application is based on HTML5 and JavaScript using jQuery and JQuery UI.
+
+VidyoWeb sample uses jQuery and few jQuery plugins (see FILES for a list) for UI (User Interface) interactions.
+
+It is not mandatory to use any of the 3rd party libraries listed above, they are used as a sample reference.
+
+USAGE
+
+Please be sure your site is secured (https) and use the following URL argument options to connect to conference:    
+For Guest Access:
+https://<sample website>/?portalUri=<fullGuestLink>
+Optional parameters:
+    &guestName=FirstName+LastName (+ symbols will be replaced by spaces in the code)
+    &roomPin=<pincode>
+    &encoded=1 if roomlink is HTML encoded, this will properly decode it; mainly used when redirecting from another page
+
+For User Access (join own room):
+https://<sample website>/?portalAddress=<http(s)://full portal Address>&username=<username>&password=<password>
+

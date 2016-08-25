@@ -1,0 +1,16 @@
+VidyoWeb Simple Sample Application
+1.0.1 - May 16 2016
+Plugin Version: 
+    - Chrome: 1.3.6.0005 
+    - NPAPI:  1.3.6.0005
+
+New Features:
+    - Sample site will present usage instructions if no URL arguments are used
+    - Console Logs include timestampe
+    - Chrome: Double-clicking on window when a share is active will make share resize to full window. 
+              Double-clicking again will return to normal view
+    - Stop plugin on end of conference. This will allow opening another VidyoWeb window without closing the current
+    - Ability to login as registered user and join own personal room with different URL arguments
+
+Bug Fixes:
+    - Replace ALL occurrences of "+" character in guestName url argument 
