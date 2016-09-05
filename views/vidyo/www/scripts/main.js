@@ -1079,7 +1079,7 @@ var sendGuestLogin = function () {
     };
 
     if (url_roomPin){
-        inEvent.pin = roomPin;
+        inEvent.pin = url_roomPin;
     }
     vidyoClient.sendEvent(inEvent);
 };

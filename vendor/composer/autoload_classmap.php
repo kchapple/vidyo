@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'VidyoController' => $baseDir . '/controllers/VidyoController.php',
+    'AdminController' => $baseDir . '/controllers/AdminController.php',
 );

@@ -8,6 +8,7 @@ class ComposerStaticInit2dda396b20ed3c3a713706aa7d3d0386
 {
     public static $classMap = array (
         'VidyoController' => __DIR__ . '/../..' . '/controllers/VidyoController.php',
+        'AdminController' => __DIR__ . '/../..' . '/controllers/AdminController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
