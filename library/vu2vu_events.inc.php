@@ -215,7 +215,7 @@ function vu2vu_check_status( $vu2vu_client, $username, $roomname, $appt_id, $sta
             $room_url = $room->RoomMode->roomURL;
             $pin = $room->RoomMode->roomPIN;
             $parse = parse_url( $room_url );
-            $portalUri = $parse['host'];
+            $portalUri = "{$parse['scheme']}://{$parse['host']}";
             $query = parse_url( $room_url, PHP_URL_QUERY );
             $vars = array();
             parse_str( $query, $vars );
