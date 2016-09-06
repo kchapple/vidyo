@@ -219,17 +219,23 @@ function vu2vu_check_status( $vu2vu_client, $username, $roomname, $appt_id, $sta
             $query = parse_url( $room_url, PHP_URL_QUERY );
             $vars = array();
             parse_str( $query, $vars );
+            $roomKey = $vars['key'];
+            if ( $portalUri &&
+                $roomKey &&
+                $pin ) {
+                $location = [
+                    'portalUri' => $portalUri,
+                    'roomKey' => $roomKey,
+                    'pin' => $pin
+                ];
+                $info_msg = $info_msg = "Video URL is:" . $room_url;
 
-            $location = [
-                'portalUri' => $portalUri,
-                'roomKey' => $vars['key'],
-                'pin' => $pin
-            ];
-            $info_msg = $info_msg = "Video URL is:" . $room_url;
-
-            // Store room data in database
-            $sql = "UPDATE libreehr_postcalendar_events SET pc_location = ? WHERE pc_eid = ?";
-            $result = sqlStatement( $sql, [ json_encode( $location ), $appt_id ] );
+                // Store room data in database
+                $sql = "UPDATE libreehr_postcalendar_events SET pc_location = ? WHERE pc_eid = ?";
+                $result = sqlStatement($sql, [json_encode($location), $appt_id]);
+            } else {
+                error_log( "Location missing params { portalUri=>$portalUri, roomKey=>$roomKey, pin=>$pin }");
+            }
 
             //TODO - send email invite from here
         } else {
