@@ -1,6 +1,6 @@
  DELETE FROM `list_options` WHERE `list_id` = 'apptstat';
 
-INSERT INTO list_options ( list_id, option_id, title, seq, is_default ) VALUES ('lists'   ,'apptstat','Appointment Statuses', 1,0);
+-- INSERT INTO list_options ( list_id, option_id, title, seq, is_default ) VALUES ('lists'   ,'apptstat','Appointment Statuses', 1,0);
 INSERT INTO list_options ( list_id, option_id, title, seq, is_default, notes, mapping ) VALUES ('apptstat','-','- None/Unknown'        ,10,0,'FEFDCF|0','unknown');
 INSERT INTO list_options ( list_id, option_id, title, seq, is_default, notes, mapping ) VALUES ('apptstat','^','^ Pending'             ,20,0,'FEFDCF|0','pending');
 INSERT INTO list_options ( list_id, option_id, title, seq, is_default, notes, mapping ) VALUES ('apptstat','*','* Booked'              ,30,0,'FFC9F8|0','booked');

@@ -23,14 +23,14 @@ class VidyoController extends AbstractController
         $pid = $this->request->getParam( 'pid' );
 
         $settings = vu2vu_getUserSettings( $_SESSION['authUserID'] );
-        $user = getUserIDInfo( $userId );
+        $user = getUserIDInfo( $_SESSION['authUserID'] );
 
         $vidyo = new stdClass();
         $vidyo->soapProxy = $GLOBALS["webroot"].'/interface/vidyo/views/vidyo/soap-proxy/server/soap_proxy.php';
         //$vidyo->portalAddress = "http://openemr.test.vu2vu.com/flex.html?roomdirect.html&key=ZlVHJr4DgBkyiGXH21cUSFx3cZs";
-        $vidyo->portalUri = "{$settings['vidyo_portal_url']}/flex.html?roomdirect.html&key=$roomKey";
-        $vidyo->username = $settings['vu2vu_username'];
-        $vidyo->password = $settings['vu2vu_password'];
+        $vidyo->portalUri = "{$settings['vu2vu_portal_url']}/flex.html?roomdirect.html&key=$roomKey";
+        $vidyo->username = ""; //$settings['vu2vu_username'];
+        $vidyo->password = ""; //$settings['vu2vu_password'];
         $vidyo->guestName = $user['fname']." ".$user['lname'];
         $vidyo->roomPin = $pin;
         $vidyo->encoded = "1";

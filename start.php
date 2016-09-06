@@ -42,6 +42,7 @@ function gp_after_appointment( $row )
                 });
             </script>
         </div>
+        <br>
     <?php }
 }
 add_action( 'demographics_after_appointment', 'gp_after_appointment' );
