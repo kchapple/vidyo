@@ -24,7 +24,7 @@ function gp_after_appointment( $row )
         'userId' => $row['pc_aid'],
         'pid' => $row['pc_pid']
     ];
-//    if ( $location &&
+    if ( $location ) { // &&
 //        ( $row['pc_aid'] == $_SESSION['authUserID'] ||
 //        $_SESSION['authUser'] == 'admin' ) ) { ?>
         <div>
@@ -43,7 +43,7 @@ function gp_after_appointment( $row )
             </script>
         </div>
         <br>
-    <?php //}
+    <?php }
 }
 add_action( 'demographics_after_appointment', 'gp_after_appointment' );
 

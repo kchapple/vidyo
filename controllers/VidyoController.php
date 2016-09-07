@@ -36,6 +36,8 @@ class VidyoController extends AbstractController
         $vidyo->encoded = "1";
         $vidyo->useSignIn = "0";
 
+        print_r( $vidyo );
+
         $this->view->vidyo = $vidyo;
         $this->setViewScript( 'vidyo/www/index.php' );
     }

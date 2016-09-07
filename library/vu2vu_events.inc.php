@@ -209,6 +209,8 @@ function vu2vu_check_status( $vu2vu_client, $username, $roomname, $appt_id, $sta
             $newExtension = substr( $myExtension, 0, 4 ).rand( 100, 999 );
             $room = vu2vu_addRoom( $vu2vu_client, $newExtension, $roomname, $username, $title );
             $pin = vu2vu_addPinToRoom( $vu2vu_client, $room );
+            $room->RoomMode->roomPIN = $pin;
+            $room->RoomMode->hasPIN = true;
         }
 
         if ( $room ) {
