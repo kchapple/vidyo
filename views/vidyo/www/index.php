@@ -36,7 +36,7 @@
       following url argument options to connect to conference:    
    </p>
    <p>
-      <b>For Guest Access:</b><br>
+      <b><?php echo $this->vidyo->title; ?></b><br>
       https://<span id ="maingURL"></span>/?portalUri=&lt;fullGuestLink&gt;<br>
       &nbsp;Optional parameters:<br>
       &nbsp;&nbsp;&amp;guestName=FirstName+LastName (+ symbol will be replaced by space in the code)<br>

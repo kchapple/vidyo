@@ -33,6 +33,7 @@ function gp_after_appointment( $row )
 
             <script type="text/javascript">
                 $(document).ready( function() {
+
                     $(".join-appointment").show();
 
                     $(".join-appointment").click( function( e ){

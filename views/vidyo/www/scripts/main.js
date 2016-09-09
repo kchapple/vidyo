@@ -947,6 +947,10 @@ var parseDomArgs = function() {
     url_roomPin       = document.getElementById("roomPin").innerText;
     url_encoded       = document.getElementById("encoded").innerText;
     url_useSignIn     = document.getElementById("useSignIn").innerText;
+
+    img_camera_array= new Array( url_baseUrl + '/images/camera_privacy.png', url_baseUrl + '/images/camera.png');
+    img_mic_array= new Array( url_baseUrl + '/images/mic_mute.png', url_baseUrl + '/images/mic.png');
+    img_speaker_array= new Array( url_baseUrl + '/images/speaker_mute.png', url_baseUrl + '/images/speaker.png');
 }
 
 var sendLoginEvent = function () {

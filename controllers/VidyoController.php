@@ -35,8 +35,9 @@ class VidyoController extends AbstractController
         $vidyo->roomPin = $pin;
         $vidyo->encoded = "1";
         $vidyo->useSignIn = "0";
+        $vidyo->title = "Appointment";
 
-        print_r( $vidyo );
+        // print_r( $vidyo );
 
         $this->view->vidyo = $vidyo;
         $this->setViewScript( 'vidyo/www/index.php' );
