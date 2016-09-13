@@ -13,7 +13,7 @@
 <body onbeforeunload="return beforeUnload()">
 <div class="container" id="whole">
 <div class="videoWrapperFull" id="VidyoSplash" align="center" >
-   <img src="<?php echo $this->baseUrl(); ?>/views/vidyo/www/images/logo-big.jpg"
+   <img src="<?php echo $this->baseUrl(); ?>/views/vidyo/www/images/GPOnline-logo.png"
       style="padding-top: 75px;">
     <div id="js-progressbar-container">
        <div id="progressbar"></div>
